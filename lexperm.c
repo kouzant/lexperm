@@ -29,13 +29,14 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
+    int i;
+
     if (argc == 2){
         int n = atoi(argv[1]);
         int p[n];
         int complete = 1;
 
         /*Initialize the vector*/
-        int i;
         for (i = 0; i < n; i++)
             p[i] = i + 1;
         printv(p, n);
@@ -45,14 +46,14 @@ int main(int argc, char *argv[]){
         }while(!complete);
     }else{
         /*Build the permutation vector*/
-        int i;
         int p[argc - 1];
         for (i = 0; i < argc - 1; i++)
             p[i] = atoi(argv[i + 1]);
-        
-        printf("lala\n");
         printv(p, argc - 1);
+        /*Compute next permutation*/
+        perm(p, argc - 1);
     }
+
     return 0;
 }
 
