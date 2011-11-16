@@ -1,1 +1,23 @@
-Permutations generation in lexicographic order
+lexperm
+-------
+Copyright 2011 (c)
+Kouzoupis Antonis <kouzoupis.ant@gmail.com>
+
+About
+-----
+Generates permutations in lexicographic order.
+
+Usage
+-----
+lexperm N -- N is the order of the permutation. Generates all the permutations
+                of the given order.
+lexperm PERMUTATION -- PERMUTATION is a permutation of n order with its digits
+                space separated. Generates the next lexicographic permutation.
+
+Examples
+--------
+lexperm 4 -- Generates all the permutations of order 4 in lexicographic order.
+                The number of the permutations is n! so beware of the N.
+lexperm 2 4 1 3 -- Generates the next permutation in lexicographic order.
+
+The source code is licensed under the GPLv3 license. 
