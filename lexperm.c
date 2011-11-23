@@ -22,10 +22,11 @@ void printv(int *, int);
 void swap(int *, int, int);
 void reverse(int *, int, int);
 int perm(int *, int);
+void help();
 
 int main(int argc, char *argv[]){
     if (argc < 2){
-        printf("You should give the order of the permutation or a permutation\n");
+        help();
         return 1;
     }
 
@@ -111,4 +112,16 @@ int perm(int p[], int n){
     printv(p, n); 
 
     return 0;
+}
+
+/*Print a help message*/
+void help(){
+    printf("\nUsage:\n");
+    printf("------\n");
+    printf("lexperm N -- N is the order of the permutation. Generates all the permutations of the given order.\n");
+    printf("lexperm PERMUTATION -- PERMUTATION is a permutation of n order with its digits space separated. Generates the next lexicographic permutation.\n\n");
+    printf("Examples:\n");
+    printf("---------\n");
+    printf("lexperm 4 -- Generates all the permutations of order 4 in lexicographic order. The number of the permutations is n! so beware of the N.\n");
+    printf("lexperm 2 4 1 3 -- Generates the next permutation in lexicographic order.\n\n");
 }
