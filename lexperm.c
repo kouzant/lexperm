@@ -30,12 +30,11 @@ int main(int argc, char *argv[]){
         return 1;
     }
 
-    int i;
-
     if (argc == 2){
         int n = atoi(argv[1]);
         int p[n];
         int complete = 1;
+        int i;
 
         /*Initialize the vector*/
         for (i = 0; i < n; i++)
@@ -48,6 +47,8 @@ int main(int argc, char *argv[]){
     }else{
         /*Build the permutation vector*/
         int p[argc - 1];
+        int i;
+
         for (i = 0; i < argc - 1; i++)
             p[i] = atoi(argv[i + 1]);
         printv(p, argc - 1);
